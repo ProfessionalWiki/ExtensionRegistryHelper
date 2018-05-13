@@ -40,7 +40,7 @@ class ExtensionRegistryHelper {
 	 * @param $extensionName
 	 * @param null $path
 	 *
-	 * @throws \ReflectionException
+	 * @throws \Exception
 	 */
 	public function loadExtensionRecursive( $extensionName, $path = null ) {
 		$path = $path ?: $GLOBALS[ 'wgExtensionDirectory' ] . '/' . $extensionName . '/extension.json';
@@ -51,7 +51,7 @@ class ExtensionRegistryHelper {
 	 * @param $skinName
 	 * @param null $path
 	 *
-	 * @throws \ReflectionException
+	 * @throws \Exception
 	 */
 	public function loadSkinRecursive( $skinName, $path = null ) {
 		$path = $path ?: $GLOBALS[ 'wgStyleDirectory' ] . '/' . $skinName . '/skin.json';
@@ -61,7 +61,7 @@ class ExtensionRegistryHelper {
 	/**
 	 * @param $moduleName
 	 *
-	 * @throws \ReflectionException
+	 * @throws \Exception
 	 */
 	protected function loadModuleRecursive( $moduleName, $path ) {
 
@@ -72,9 +72,13 @@ class ExtensionRegistryHelper {
 			$subregistry = new \ExtensionRegistry();
 			$subregistry->load( $path );
 
-			$loadedRefl = new \ReflectionProperty( \ExtensionRegistry::class, 'loaded' );
-			$loadedRefl->setAccessible( true );
-			$loadedRefl->setValue( $extensionRegistry, $extensionRegistry->getAllThings() + $subregistry->getAllThings() );
+			try {
+				$loadedRefl = new \ReflectionProperty( \ExtensionRegistry::class, 'loaded' );
+				$loadedRefl->setAccessible( true );
+				$loadedRefl->setValue( $extensionRegistry, $extensionRegistry->getAllThings() + $subregistry->getAllThings() );
+			} catch ( \Exception $e ) {
+				throw new \Exception( 'This version of MediaWiki does not support ExtensionRegistryHelper.', 0, $e );
+			}
 
 		}
 	}
