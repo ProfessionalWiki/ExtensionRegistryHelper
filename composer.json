@@ -1,5 +1,5 @@
 {
-    "name": "cmln/mw-extension-registry-helper",
+    "name": "mediawiki/mw-extension-registry-helper",
     "type": "library",
     "description": "Helper functions for the MediaWiki ExtensionRegistry",
     "keywords": [
