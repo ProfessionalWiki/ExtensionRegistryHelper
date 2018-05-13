@@ -1,4 +1,10 @@
 <?php
+/**
+ * @copyright 2018, Stephan Gambke
+ * @license   GNU General Public License, version 3 (or any later version)
+ *
+ * @file
+ */
 
 namespace ExtensionRegistryHelper;
 
