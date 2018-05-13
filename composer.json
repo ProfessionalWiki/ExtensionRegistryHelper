@@ -1,0 +1,32 @@
+{
+    "name": "cmln/mw-extension-registry-helper",
+    "type": "library",
+    "description": "Helper functions for the MediaWiki ExtensionRegistry",
+    "keywords": [
+        "MediaWiki"
+    ],
+    "homepage": "https://github.com/cmln/mw-extension-registry-helper",
+    "readme": "README.md",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Stephan Gambke",
+            "email": "s7eph4n@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/cmln/mw-extension-registry-helper/issues",
+        "source": "https://github.com/cmln/mw-extension-registry-helper",
+        "docs": "https://github.com/cmln/mw-extension-registry-helper/blob/master/README.md",
+        "rss": "https://github.com/cmln/mw-extension-registry-helper/releases.atom"
+    },
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExtensionRegistryHelper\\": ""
+        }
+    }
+}
