@@ -1,3 +1,6 @@
+[![Latest Stable Version](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/v/stable)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
+[![License](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/license)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
+
 # MediaWiki Extension Registry Helper
 
 The MediaWiki Extension Registry Helper is a tiny library that allows recursive 
