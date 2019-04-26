@@ -27,7 +27,7 @@ If your skin or extension depends on another extension, call
 
 If your skin or extension depends on another skin, call
 ```php
-\ExtensionRegistryHelper\ExtensionRegistryHelper::singleton()->loadExtensionRecursive( $skinName, $pathToSkinJson ),
+\ExtensionRegistryHelper\ExtensionRegistryHelper::singleton()->loadSkinRecursive( $skinName, $pathToSkinJson ),
 ```
 
 The paths to the `extension.json`/`skin.json` file may be ommitted. In this case
