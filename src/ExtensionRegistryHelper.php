@@ -24,7 +24,7 @@ class ExtensionRegistryHelper {
 	 * @throws \Exception
 	 */
 	public function __construct() {
-		if ( version_compare( $GLOBALS[ 'wgVersion' ], '1.27', '<' ) ) {
+		if ( ! isset( $GLOBALS[ 'wgVersion' ] ) || version_compare( $GLOBALS[ 'wgVersion' ], '1.27', '<' ) ) {
 			throw new \Exception( 'ExtensionRegistryHelper requires MediaWiki 1.27 or above.' );
 		}
 	}
