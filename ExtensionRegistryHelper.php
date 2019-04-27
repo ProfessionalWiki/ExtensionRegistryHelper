@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright 2018, Stephan Gambke
+ * @copyright 2018 - 2019, Stephan Gambke
  * @license   GNU General Public License, version 3 (or any later version)
  *
  * @file
@@ -44,7 +44,7 @@ class ExtensionRegistryHelper {
 
 	/**
 	 * @param $extensionName
-	 * @param null $path
+	 * @param string|null $path
 	 *
 	 * @throws \Exception
 	 */
@@ -55,7 +55,7 @@ class ExtensionRegistryHelper {
 
 	/**
 	 * @param $skinName
-	 * @param null $path
+	 * @param string|null $path
 	 *
 	 * @throws \Exception
 	 */
