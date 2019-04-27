@@ -1,3 +1,6 @@
+[![Latest Stable Version](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/v/stable)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
+[![License](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/license)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
+
 # MediaWiki Extension Registry Helper
 
 The MediaWiki Extension Registry Helper is a tiny library that allows recursive 
@@ -24,7 +27,7 @@ If your skin or extension depends on another extension, call
 
 If your skin or extension depends on another skin, call
 ```php
-\ExtensionRegistryHelper\ExtensionRegistryHelper::singleton()->loadExtensionRecursive( $skinName, $pathToSkinJson ),
+\ExtensionRegistryHelper\ExtensionRegistryHelper::singleton()->loadSkinRecursive( $skinName, $pathToSkinJson ),
 ```
 
 The paths to the `extension.json`/`skin.json` file may be ommitted. In this case
