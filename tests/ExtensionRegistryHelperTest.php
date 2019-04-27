@@ -1,4 +1,5 @@
 <?php
+
 namespace ExtensionRegistryHelper\Test;
 
 use ExtensionRegistryHelper\ExtensionRegistryHelper;
@@ -10,13 +11,25 @@ use PHPUnit\Framework\TestCase;
 class ExtensionRegistryHelperTest extends TestCase {
 
 	/**
+	 * This has to come first. Otherwise the singleton will already be stored in the static variable.
+	 *
 	 * @throws \Exception
 	 */
-	public function testGetSingleton(){
+	public function testGetSingletonOnInvalidEnvironment() {
+
+		$this->expectException( \Exception::class );
+
+		self::assertInstanceOf( ExtensionRegistryHelper::class, ExtensionRegistryHelper::singleton() );
+	}
+
+	/**
+	 * @throws \Exception
+	 */
+	public function testGetSingleton() {
 
 		$GLOBALS[ 'wgVersion' ] = '1.27';
-		$helper = ExtensionRegistryHelper::singleton();
-		self::assertInstanceOf( ExtensionRegistryHelper::class, $helper );
+		self::assertInstanceOf( ExtensionRegistryHelper::class, ExtensionRegistryHelper::singleton() );
 	}
+
 
 }
