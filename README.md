@@ -1,7 +1,7 @@
+# MediaWiki Extension Registry Helper
+
 [![Latest Stable Version](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/v/stable)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
 [![License](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/license)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
-
-# MediaWiki Extension Registry Helper
 
 The MediaWiki Extension Registry Helper is a tiny library that allows recursive 
 loading of skins and extensions in MediaWiki.
@@ -10,6 +10,12 @@ loading of skins and extensions in MediaWiki.
 
 - PHP 5.6 or later
 - MediaWiki 1.27 or later
+
+## Installation
+
+```bash
+composer require "mediawiki/mw-extension-registry-helper:1.*"
+```
 
 ## Usage
 
@@ -51,6 +57,6 @@ on are loaded from `LocalSettings.php`, but in the wrong order.
 
 ## License
 
-Copyright 2018, Stephan Gambke
+Copyright 2018 - 2019, Stephan Gambke
 
 [GNU General Public License, version 3](https://www.gnu.org/copyleft/gpl.html) (or any later version)
