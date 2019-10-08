@@ -77,12 +77,8 @@ class ExtensionRegistryHelper {
 
 			$subregistry = new \ExtensionRegistry();
 
-			if ( version_compare( MW_VERSION, '1.34', '<' ) ) {
-				$subregistry->load( $path );
-			} else {
-				$subregistry->queue( $path );
-				$subregistry->loadFromQueue();
-			}
+			$subregistry->queue( $path );
+			$subregistry->loadFromQueue();
 
 			try {
 				$loadedRefl = new \ReflectionProperty( \ExtensionRegistry::class, 'loaded' );
