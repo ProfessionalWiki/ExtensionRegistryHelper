@@ -1,6 +1,6 @@
 # MediaWiki Extension Registry Helper
 
-[![Build Status](https://scrutinizer-ci.com/g/ProfessionalWiki/mw-extension-registry-helper/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/mw-extension-registry-helper/build-status/master)
+[![Build Status](https://scrutinizer-ci.com/g/ProfessionalWiki/ExtensionRegistryHelper/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/ExtensionRegistryHelper/build-status/master)
 [![Latest Stable Version](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/v/stable)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
 [![License](https://poser.pugx.org/mediawiki/mw-extension-registry-helper/license)](https://packagist.org/packages/mediawiki/mw-extension-registry-helper)
 
