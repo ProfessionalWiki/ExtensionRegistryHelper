@@ -22,7 +22,7 @@
 		"rss": "https://github.com/ProfessionalWiki/ExtensionRegistryHelper/releases.atom"
 	},
 	"require": {
-		"php": ">=5.6",
+		"php": ">=7.0",
 		"mediawiki/mediawiki": ">=1.27"
 	},
 	"require-dev": {
